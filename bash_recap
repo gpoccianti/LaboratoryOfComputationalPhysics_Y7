@@ -1,0 +1,25 @@
+#!/bin/bash
+
+read -p "Please select the number of copies: " n
+
+#for ii in {1..$n} creates problem with the operations !
+
+for ii in $(seq 1 $n); do
+    # Clean the file (no need to copy it, just clear it if it exists)
+    > data_$ii.txt  # Clear or create the file
+
+    # Process each line of data.txt
+    tail -n +1 data.txt | cut -d" " -f1-6 | while read -r field1 field2 field3 field4 field5 field6; do
+
+        # Divide each field by $ii
+        field1=$(echo "scale=2; $field1 / $ii" | bc -l)
+        field2=$(echo "scale=2; $field2 / $ii" | bc -l)
+        field3=$(echo "scale=2; $field3 / $ii" | bc -l)
+        field4=$(echo "scale=2; $field4 / $ii" | bc -l)
+        field5=$(echo "scale=2; $field5 / $ii" | bc -l)
+        field6=$(echo "scale=2; $field6 / $ii" | bc -l)
+
+        # Write the transformed values into the file
+        echo "$field1 $field2 $field3 $field4 $field5 $field6" >> data_$ii.txt
+    done
+done

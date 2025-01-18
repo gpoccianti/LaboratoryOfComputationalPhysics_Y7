@@ -1,0 +1,10 @@
+#!/bin/bash
+students=$(awk 'NR > 1' students_file.csv | cut -d, -f1,2)
+ln=0 # line counter
+
+for student in $students; do
+    ln=$((ln + 1)) # Increment line counter
+
+    count=$((ln % 18)) # Calculate modulus
+    echo "$student" >> "student_mod$count"
+done

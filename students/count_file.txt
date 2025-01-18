@@ -1,0 +1,51 @@
+ARGOMENTO '2' __ignorato__
+
+
+R version 4.4.0 (2024-04-24) -- "Puppy Cup"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20
+
+R è un software libero ed è rilasciato SENZA ALCUNA GARANZIA.
+Siamo ben lieti se potrai redistribuirlo, ma sotto certe condizioni.
+Scrivi 'license()' o 'licence()' per maggiori dettagli.
+
+R è un progetto collaborativo con molti contributi esterni.
+Scrivi 'contributors()' per maggiori informazioni e 'citation()'
+per sapere come citare R o i pacchetti nelle pubblicazioni.
+
+Scrivi 'demo()' per una dimostrazione, 'help()' per la guida
+oppure 'help.start()' per la guida nel browser HTML.
+Scrivi 'q()' per uscire da R.
+
+[?1034h> for letter in {A..Z}; do 
+[1mErrore: simbolo inatteso in "for letter"
+[0m> count=$(awk 'NR>1' students_file.csv | cut -f1,2 -d , | grep -c "^$letter")
+[1mErrore: '$' inatteso in "count=$"
+[0m> echo $letter $count >> count_file.txt
+[1mErrore: '>' inatteso in "echo $letter $count >>"
+[0m> doneA 2
+B 13
+C 3
+D 6
+E 1
+F 3
+G 4
+H 1
+I 1
+J 1
+K 1
+L 3
+M 7
+N 0
+O 0
+P 6
+Q 0
+R 2
+S 7
+T 2
+U 0
+V 3
+W 2
+X 0
+Y 0
+Z 5
